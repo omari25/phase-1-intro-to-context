@@ -1,21 +1,17 @@
 // Your code here
-function createEmployeeRecord([firstname, familyname, title, payratePerHour]){
+function createEmployeeRecord([firstName, familyName, title, payRatePerHour]){
     return {
-        'firstName': firstname,
-        'familyName': familyname,
+        'firstName': firstName,
+        'familyName': familyName,
         'title': title,
-        'payPerHour': payratePerHour,
+        'payPerHour': payRatePerHour,
         'timeInEvents': [],
         'timeOutEvents': []
     }
 }
 
-function createEmployeeRecords(employeeRecordArray){
-    let employeeRecords = []
-    for (let employeeRecord of employeeRecordArray){
-        employeeRecords.push(createEmployeeRecord(employeeRecord))
-    }
-    return employeeRecords
+function createEmployeeRecords(arrayOfArrays) {
+    return arrayOfArrays.map(createEmployeeRecord);
 }
 
 function createTimeInEvent(employeeRecord, dateStamp){
